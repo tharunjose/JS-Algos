@@ -1,0 +1,17 @@
+function reverse_words (str) {
+  var reversed_string = reverse(str);
+  var reversed_words_string = '';
+  var reversed_words_array = reversed_string.split(' ');
+  for(var i in reversed_words_array) {
+    reversed_words_string += reverse(reversed_words_array[i])+' ';
+  }
+  console.log(reversed_words_string.trim());
+}
+function reverse (str) {
+  var newstr = '';
+  for(var i = 0; i<=str.length-1; i++) {
+      newstr += (str.charAt(str.length-i-1));
+  }
+  return newstr;
+}
+console.log(reverse_words('This is a silly world'))
